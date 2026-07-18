@@ -48,9 +48,9 @@ include '../../includes/sidebar.php';
             <h1 class="text-2xl font-semibold text-gray-800 flex items-center gap-4">
                 التقارير:
                 <select onchange="window.location.href=this.value" class="text-base border border-gray-300 rounded-lg focus:ring-amber-500 focus:border-amber-500 font-medium text-gray-700 bg-white shadow-sm px-4 py-2 outline-none cursor-pointer">
-                    <option value="/construction_system/modules/reports/financial_report.php">المالية</option>
-                    <option value="/construction_system/modules/inventory/stock_report.php" selected>المخزون</option>
-                    <option value="/construction_system/modules/reports/project_report.php">المشاريع</option>
+                    <option value="/modules/reports/financial_report.php">المالية</option>
+                    <option value="/modules/inventory/stock_report.php" selected>المخزون</option>
+                    <option value="/modules/reports/project_report.php">المشاريع</option>
                 </select>
             </h1>
             <p class="text-gray-500 text-sm mt-1">

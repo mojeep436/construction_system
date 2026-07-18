@@ -1,0 +1,19 @@
+RewriteEngine On
+
+# Force HTTPS on Render
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Set default directory index
+DirectoryIndex index.php
+
+# Prevent directory listing
+Options -Indexes
+
+# UTF-8 encoding
+AddDefaultCharset UTF-8
+
+# PHP error display (disable in production)
+php_flag display_errors Off
+php_flag log_errors On

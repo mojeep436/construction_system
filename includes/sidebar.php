@@ -21,7 +21,7 @@ $role = $_SESSION['role'] ?? '';
     <nav class="p-4 space-y-2 overflow-y-auto h-[calc(100%-4rem)]">
 
         <!-- Dashboard -->
-        <a href="/construction_system/dashboard.php"
+        <a href="/dashboard.php"
            class="flex items-center px-4 py-2 rounded-lg transition-all duration-200
            <?= ($current_page == 'dashboard.php' || $current_page == 'dashboard.php.php') ? 'bg-amber-500 text-white shadow-md' : 'hover:bg-slate-800 hover:text-white' ?>">
             <i class="fa fa-home ml-3"></i>
@@ -74,7 +74,7 @@ $role = $_SESSION['role'] ?? '';
         <?php endif; ?>
 
         <!-- Logout -->
-        <a href="/construction_system/logout.php"
+        <a href="/logout.php"
            class="flex items-center px-4 py-2 mt-4 rounded-lg text-red-400 hover:bg-red-500 hover:text-white transition">
             <i class="fa fa-sign-out-alt ml-3"></i>
             <span>تسجيل الخروج</span>
@@ -106,7 +106,7 @@ function sidebarLink($path, $icon, $label, $current_page){
     $current_url = $_SERVER['REQUEST_URI'];
 
     // Build full link URL
-    $full_link = "/construction_system/modules/".$path;
+    $full_link = "/modules/".$path;
 
     // Check if current URL matches this link
     $active = strpos($current_url, $full_link) !== false;

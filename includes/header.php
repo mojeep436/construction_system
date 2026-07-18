@@ -64,7 +64,7 @@ if (session_status() == PHP_SESSION_NONE) {
                         <i class="fa fa-user ml-2 text-gray-500"></i> الملف الشخصي
                     </a>
 
-                    <a href="/construction_system/logout.php" 
+                    <a href="/logout.php" 
                        class="flex items-center px-4 py-2 text-red-600 hover:bg-red-50 transition">
                         <i class="fa fa-sign-out-alt ml-2"></i> تسجيل الخروج
                     </a>
