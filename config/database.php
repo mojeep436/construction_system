@@ -21,8 +21,13 @@ $conn = mysqli_init();
 // Enable SSL for remote database connections (Render)
 $flags = 0;
 if ($host !== 'localhost') {
-    // Most cloud MySQL providers require SSL
+    // Provide an empty SSL setup
     $conn->ssl_set(NULL, NULL, NULL, NULL, NULL);
+    
+    // Disable strict SSL certificate verification to avoid "Unknown error"
+    // This happens because the Docker container might lack the specific CA cert used by Aiven
+    $conn->options(MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, false);
+    
     $flags = MYSQLI_CLIENT_SSL;
 }
 
