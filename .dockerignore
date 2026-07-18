@@ -1,0 +1,15 @@
+.git
+.gitignore
+.dist
+backups
+construction_system.rar
+*.php.php
+*.php.txt
+.dockerignore
+Dockerfile
+render.yaml
+.env
+.env.example
+README.md
+database_init.sql
+construction_system.sql
